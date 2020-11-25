@@ -14,6 +14,7 @@ import User from "../user/user";
 import ChartLine from "../chart/chart-line";
 import ChartBar from "../chart/chart-bar";
 import ChartPie from "../chart/chart-pie";
+import "./admin.less";
 
 const {Footer, Sider, Content } = Layout;
 
@@ -25,7 +26,7 @@ export default class Admin extends Component {
             return <Redirect to={Constants.BASE_URL + "/login"}/>
         } else {
             return (
-                <Layout style={{height: "100%"}}>
+                <Layout className="admin">
                     <Sider>
                         <LeftNav/>
                     </Sider>
