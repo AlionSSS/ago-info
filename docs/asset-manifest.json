@@ -1,27 +1,27 @@
 {
   "files": {
-    "main.css": "/react-admin-client/static/css/main.77484047.chunk.css",
-    "main.js": "/react-admin-client/static/js/main.1224a1ae.chunk.js",
-    "main.js.map": "/react-admin-client/static/js/main.1224a1ae.chunk.js.map",
-    "runtime-main.js": "/react-admin-client/static/js/runtime-main.175f44c8.js",
-    "runtime-main.js.map": "/react-admin-client/static/js/runtime-main.175f44c8.js.map",
-    "static/css/2.bdda2bbf.chunk.css": "/react-admin-client/static/css/2.bdda2bbf.chunk.css",
-    "static/js/2.4c04c417.chunk.js": "/react-admin-client/static/js/2.4c04c417.chunk.js",
-    "static/js/2.4c04c417.chunk.js.map": "/react-admin-client/static/js/2.4c04c417.chunk.js.map",
-    "static/js/3.7f1c1821.chunk.js": "/react-admin-client/static/js/3.7f1c1821.chunk.js",
-    "static/js/3.7f1c1821.chunk.js.map": "/react-admin-client/static/js/3.7f1c1821.chunk.js.map",
-    "index.html": "/react-admin-client/index.html",
-    "static/css/2.bdda2bbf.chunk.css.map": "/react-admin-client/static/css/2.bdda2bbf.chunk.css.map",
-    "static/css/main.77484047.chunk.css.map": "/react-admin-client/static/css/main.77484047.chunk.css.map",
-    "static/js/2.4c04c417.chunk.js.LICENSE.txt": "/react-admin-client/static/js/2.4c04c417.chunk.js.LICENSE.txt",
-    "static/media/login.less": "/react-admin-client/static/media/login_back.3026c36e.jpg",
-    "static/media/logo.8ca7528f.ico": "/react-admin-client/static/media/logo.8ca7528f.ico"
+    "main.css": "/ago-info/static/css/main.887749b6.chunk.css",
+    "main.js": "/ago-info/static/js/main.1224a1ae.chunk.js",
+    "main.js.map": "/ago-info/static/js/main.1224a1ae.chunk.js.map",
+    "runtime-main.js": "/ago-info/static/js/runtime-main.ea73b5ec.js",
+    "runtime-main.js.map": "/ago-info/static/js/runtime-main.ea73b5ec.js.map",
+    "static/css/2.2e129cf8.chunk.css": "/ago-info/static/css/2.2e129cf8.chunk.css",
+    "static/js/2.17ed7806.chunk.js": "/ago-info/static/js/2.17ed7806.chunk.js",
+    "static/js/2.17ed7806.chunk.js.map": "/ago-info/static/js/2.17ed7806.chunk.js.map",
+    "static/js/3.7f1c1821.chunk.js": "/ago-info/static/js/3.7f1c1821.chunk.js",
+    "static/js/3.7f1c1821.chunk.js.map": "/ago-info/static/js/3.7f1c1821.chunk.js.map",
+    "index.html": "/ago-info/index.html",
+    "static/css/2.2e129cf8.chunk.css.map": "/ago-info/static/css/2.2e129cf8.chunk.css.map",
+    "static/css/main.887749b6.chunk.css.map": "/ago-info/static/css/main.887749b6.chunk.css.map",
+    "static/js/2.17ed7806.chunk.js.LICENSE.txt": "/ago-info/static/js/2.17ed7806.chunk.js.LICENSE.txt",
+    "static/media/login.less": "/ago-info/static/media/login_back.3026c36e.jpg",
+    "static/media/logo.8ca7528f.ico": "/ago-info/static/media/logo.8ca7528f.ico"
   },
   "entrypoints": [
-    "static/js/runtime-main.175f44c8.js",
-    "static/css/2.bdda2bbf.chunk.css",
-    "static/js/2.4c04c417.chunk.js",
-    "static/css/main.77484047.chunk.css",
+    "static/js/runtime-main.ea73b5ec.js",
+    "static/css/2.2e129cf8.chunk.css",
+    "static/js/2.17ed7806.chunk.js",
+    "static/css/main.887749b6.chunk.css",
     "static/js/main.1224a1ae.chunk.js"
   ]
 }
