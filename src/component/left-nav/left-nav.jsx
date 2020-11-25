@@ -51,7 +51,8 @@ class LeftNav extends Component {
                 <Menu
                     defaultSelectedKeys={path}
                     selectedKeys={path}
-                    defaultOpenKeys={[openKey]}
+                    // defaultOpenKeys={[openKey]}
+                    defaultOpenKeys={['/strategy', '/entity']}
                     mode="inline"
                     theme="dark"
                 >

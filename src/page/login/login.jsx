@@ -23,7 +23,7 @@ export default class Login extends Component {
         reqLogin(
             values.username, values.password
         ).then(response => {
-            console.log("成功", response);
+            console.log("响应结果", response);
             let result = response.data;
             if (result.status === 0) {
                 message.success("登录成功");

@@ -4,11 +4,11 @@ import {message} from "antd";
 export default class Ajax {
 
     static get(url, data = {}) {
-        return this._request2(url, data, "get");
+        return Ajax._request2(url, data, "get");
     }
 
     static post(url, data = {}) {
-        return this._request2(url, data, "post");
+        return Ajax._request2(url, data, "post");
     }
 
     /**
@@ -35,14 +35,25 @@ export default class Ajax {
 
     static _request2(url, data, type) {
         return new Promise((resolve, reject) => {
-            setTimeout(() => {
-                if (url === "/login") {
-                    resolve({data: {status: 0, message: "成功", name: data.username}});
-                } else {
-                    reject({message: "错误"});
-                }
-            }, 3000);
+            try {
+                setTimeout(() => {
+                    if (url === "/login" && Ajax._check(data)) {
+                        resolve({data: {status: 0, message: "成功", name: data.username}});
+                    } else {
+                        resolve({data: {status: -1, message: "用户名密码错误！"}});
+                    }
+                }, 3000);
+            } catch (error) {
+                // reject(error);
+                message.error("请求出错了：" + error.message);
+            }
         });
+    }
+
+    static _check(data = {}) {
+        return data &&
+            data.username === "admin1234" &&
+            data.password === "12#$";
     }
 
 }
