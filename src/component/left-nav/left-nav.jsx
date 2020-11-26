@@ -16,7 +16,7 @@ class LeftNav extends Component {
                 if (this.path.endsWith(item.key)) {
                     // this.openKeys = parentKey;
                     this.openKey = parentKey;
-                    console.log(item.key + " | " + this.path + " | " + this.openKeys);
+                    // console.log(item.key + " | " + this.path + " | " + this.openKeys);
                 }
                 return (
                     <Menu.Item key={item.key} icon={item.icon}>
