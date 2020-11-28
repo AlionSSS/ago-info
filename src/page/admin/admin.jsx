@@ -7,7 +7,7 @@ import LeftNav from "../../component/left-nav/left-nav";
 import Header from "../../component/header/header";
 import {GithubOutlined, QqOutlined, MailOutlined} from '@ant-design/icons';
 import Home from "../home/home";
-import Category from "../category/category";
+import Activity from "../activity/activity";
 import Product from "../product/product";
 import Role from "../role/role";
 import User from "../user/user";
@@ -35,13 +35,15 @@ export default class Admin extends Component {
                         <Content style={{margin:"20px",backgroundColor: "white"}}>
                             <Switch>
                                 <Route path={Constants.BASE_URL + "/home"} component={Home}/>
-                                <Route path={Constants.BASE_URL + "/category"} component={Category}/>
-                                <Route path={Constants.BASE_URL + "/product"} component={Product}/>
-                                <Route path={Constants.BASE_URL + "/role"} component={Role}/>
-                                <Route path={Constants.BASE_URL + "/user"} component={User}/>
-                                <Route path={Constants.BASE_URL + "/chartBar"} component={ChartBar}/>
-                                <Route path={Constants.BASE_URL + "/chartLine"} component={ChartLine}/>
-                                <Route path={Constants.BASE_URL + "/chartPie"} component={ChartPie}/>
+                                <Route path={Constants.BASE_URL + "/activity"} component={Activity}/>
+                                <Route path={Constants.BASE_URL + "/beginner"} component={Product}/>
+                                <Route path={Constants.BASE_URL + "/advance"} component={Role}/>
+                                <Route path={Constants.BASE_URL + "/plan"} component={User}/>
+                                <Route path={Constants.BASE_URL + "/npc"} component={ChartBar}/>
+                                <Route path={Constants.BASE_URL + "/monster"} component={ChartLine}/>
+                                <Route path={Constants.BASE_URL + "/pet"} component={ChartPie}/>
+                                <Route path={Constants.BASE_URL + "/equipment"} component={ChartPie}/>
+                                <Route path={Constants.BASE_URL + "/skill"} component={ChartPie}/>
                                 <Redirect to={Constants.BASE_URL + "/home"}/>
                             </Switch>
                         </Content>

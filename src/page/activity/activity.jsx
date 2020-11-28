@@ -1,12 +1,12 @@
 import React, {Component} from 'react';
 
 
-export default class Category extends Component {
+export default class Activity extends Component {
 
     render() {
         return (
             <div>
-                Category
+                Activity
             </div>
         );
     }

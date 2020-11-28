@@ -17,7 +17,7 @@ const menuList = [
     },
     {
         title: "活动信息",
-        key: "/role",
+        key: "/activity",
         icon: <NotificationOutlined />
     },
     {
@@ -27,17 +27,17 @@ const menuList = [
         children: [
             {
                 title: "新手攻略",
-                key: "/user",
+                key: "/beginner",
                 icon: null
             },
             {
                 title: "进阶攻略",
-                key: "/product",
+                key: "/advance",
                 icon: null
             },
             {
                 title: "职业规划",
-                key: "/category",
+                key: "/plan",
                 icon: null
             }
         ]
@@ -49,30 +49,30 @@ const menuList = [
         children: [
             {
                 title: "NPC",
-                key: "/chartBar",
+                key: "/npc",
                 icon: null
             },
             {
                 title: "怪物",
-                key: "/chartLine",
+                key: "/monster",
                 icon: null
             },
             {
                 title: "宠物",
-                key: "/chartPie",
+                key: "/pet",
                 icon: null
             },
             {
                 title: "装备",
-                key: "/12",
+                key: "/equipment",
                 icon: null
             },
             {
                 title: "职业-技能",
-                key: "/13",
+                key: "/skill",
                 icon: null
             },
-            {
+            /*{
                 title: "Submenu",
                 key: "/sub3",
                 icon: null,
@@ -88,7 +88,7 @@ const menuList = [
                         icon: null
                     }
                 ]
-            }
+            }*/
         ]
     }
 ]
