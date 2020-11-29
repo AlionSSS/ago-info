@@ -1,11 +1,11 @@
 import React, {Component} from 'react';
 
-export default class ChartPie extends Component {
+export default class Npc extends Component {
 
     render() {
         return (
             <div>
-                ChartPie
+                Npc
             </div>
         );
     }

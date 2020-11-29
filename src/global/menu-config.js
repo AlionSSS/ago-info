@@ -1,13 +1,5 @@
 import React from "react";
-import {
-    BarChartOutlined,
-    HomeOutlined,
-    NotificationOutlined,
-    AimOutlined,
-} from '@ant-design/icons';
-import {Menu} from "antd";
-import {Link} from "react-router-dom";
-import Constants from "./constants";
+import {AimOutlined, BarChartOutlined, HomeOutlined, NotificationOutlined} from '@ant-design/icons';
 
 const menuList = [
     {

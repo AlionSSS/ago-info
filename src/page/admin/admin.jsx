@@ -11,9 +11,9 @@ import Activity from "../activity/activity";
 import Product from "../product/product";
 import Role from "../role/role";
 import User from "../user/user";
-import ChartLine from "../chart/chart-line";
-import ChartBar from "../chart/chart-bar";
-import ChartPie from "../chart/chart-pie";
+import Monster from "../entity/monster";
+import Npc from "../entity/npc";
+import Pet from "../entity/pet";
 import "./admin.less";
 
 const {Footer, Sider, Content } = Layout;
@@ -39,11 +39,11 @@ export default class Admin extends Component {
                                 <Route path={Constants.BASE_URL + "/beginner"} component={Product}/>
                                 <Route path={Constants.BASE_URL + "/advance"} component={Role}/>
                                 <Route path={Constants.BASE_URL + "/plan"} component={User}/>
-                                <Route path={Constants.BASE_URL + "/npc"} component={ChartBar}/>
-                                <Route path={Constants.BASE_URL + "/monster"} component={ChartLine}/>
-                                <Route path={Constants.BASE_URL + "/pet"} component={ChartPie}/>
-                                <Route path={Constants.BASE_URL + "/equipment"} component={ChartPie}/>
-                                <Route path={Constants.BASE_URL + "/skill"} component={ChartPie}/>
+                                <Route path={Constants.BASE_URL + "/npc"} component={Npc}/>
+                                <Route path={Constants.BASE_URL + "/monster"} component={Monster}/>
+                                <Route path={Constants.BASE_URL + "/pet"} component={Pet}/>
+                                <Route path={Constants.BASE_URL + "/equipment"} component={Pet}/>
+                                <Route path={Constants.BASE_URL + "/skill"} component={Pet}/>
                                 <Redirect to={Constants.BASE_URL + "/home"}/>
                             </Switch>
                         </Content>
