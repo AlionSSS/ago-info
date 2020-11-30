@@ -93,7 +93,8 @@ export default class Monster extends Component {
         {title: "火属防", dataIndex: "fire_def", key: "fire_def"},
         {title: "风属防", dataIndex: "wind_def", key: "wind_def"},
         {title: "光属防", dataIndex: "light_def", key: "light_def"},
-        {title: "暗属防", dataIndex: "dark_def", key: "dark_def"}
+        {title: "暗属防", dataIndex: "dark_def", key: "dark_def"},
+        {title: "无属防", dataIndex: "phy_def", key: "phy_def"}
     ];
 
     render() {
