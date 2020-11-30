@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Button, Card, Table, Input, Space} from "antd";
+import {Button, Card, Table, Input, Space, message} from "antd";
 import {PlusOutlined, SearchOutlined} from '@ant-design/icons';
 import {monster_data} from "../../global/monster-data"
 import Highlighter from 'react-highlight-words';
@@ -9,6 +9,7 @@ export default class Monster extends Component {
     state = {
         searchText: '',
         searchedColumn: '',
+        loading: false
     };
 
     getColumnSearchProps = dataIndex => ({
@@ -76,41 +77,57 @@ export default class Monster extends Component {
         this.setState({searchText: ''});
     };
 
-    monster_columns = [
-        {title: "编号", dataIndex: "id", key: "id"},
-        {title: "名称", dataIndex: "name", key: "name", ...this.getColumnSearchProps('name')},
-        {title: "等级", dataIndex: "level", key: "level"},
-        {title: "系别", dataIndex: "class", key: "class"},
-        {title: "HP", dataIndex: "hp", key: "hp"},
-        {title: "攻击", dataIndex: "atk", key: "atk"},
-        {title: "防御", dataIndex: "def", key: "def"},
-        {title: "魔攻", dataIndex: "magic_atk", key: "magic_atk"},
-        {title: "魔防", dataIndex: "magic_def", key: "magic_def"},
-        {title: "命中率", dataIndex: "hit_rate", key: "hit_rate"},
-        {title: "回避率", dataIndex: "dodge", key: "dodge"},
-        {title: "地属防", dataIndex: "earth_def", key: "earth_def"},
-        {title: "水属防", dataIndex: "water_def", key: "water_def"},
-        {title: "火属防", dataIndex: "fire_def", key: "fire_def"},
-        {title: "风属防", dataIndex: "wind_def", key: "wind_def"},
-        {title: "光属防", dataIndex: "light_def", key: "light_def"},
-        {title: "暗属防", dataIndex: "dark_def", key: "dark_def"},
-        {title: "无属防", dataIndex: "phy_def", key: "phy_def"}
-    ];
+    loadData = async () => {
+        this.setState({loading: true});
+        await setTimeout(() => {
+            this.monster_data = monster_data;
+            this.setState({loading: false});
+        }, 100);
+    }
+
+    componentWillMount() {
+        this.monster_columns = [
+            {title: "编号", dataIndex: "id", key: "id"},
+            {title: "名称", dataIndex: "name", key: "name", ...this.getColumnSearchProps('name')},
+            {title: "等级", dataIndex: "level", key: "level"},
+            {title: "系别", dataIndex: "class", key: "class"},
+            {title: "HP", dataIndex: "hp", key: "hp"},
+            {title: "攻击", dataIndex: "atk", key: "atk"},
+            {title: "防御", dataIndex: "def", key: "def"},
+            {title: "魔攻", dataIndex: "magic_atk", key: "magic_atk"},
+            {title: "魔防", dataIndex: "magic_def", key: "magic_def"},
+            {title: "命中率", dataIndex: "hit_rate", key: "hit_rate"},
+            {title: "回避率", dataIndex: "dodge", key: "dodge"},
+            {title: "地属防", dataIndex: "earth_def", key: "earth_def"},
+            {title: "水属防", dataIndex: "water_def", key: "water_def"},
+            {title: "火属防", dataIndex: "fire_def", key: "fire_def"},
+            {title: "风属防", dataIndex: "wind_def", key: "wind_def"},
+            {title: "光属防", dataIndex: "light_def", key: "light_def"},
+            {title: "暗属防", dataIndex: "dark_def", key: "dark_def"},
+            {title: "无属防", dataIndex: "phy_def", key: "phy_def"}
+        ];
+    }
+
+    componentDidMount() {
+        this.loadData();
+    }
 
     render() {
         const title = "怪物属性表";
         const extra = (
-            <Button type="primary">
+            <Button type="primary" onClick={() => message.info("暂不支持！")}>
                 <PlusOutlined/>
                 添加
             </Button>
         );
 
-
         return (
             <div>
                 <Card title={title} extra={extra}>
-                    <Table dataSource={monster_data} columns={this.monster_columns} bordered={true}>
+                    <Table dataSource={this.monster_data} columns={this.monster_columns}
+                           rowKey="id"
+                           bordered={true} loading={this.state.loading}
+                           pagination={{defaultPageSize: 10, showQuickJumper: true}}>
 
                     </Table>
                 </Card>
