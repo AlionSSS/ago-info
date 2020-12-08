@@ -8,9 +8,9 @@ import Header from "../../component/header/header";
 import {GithubOutlined, QqOutlined, MailOutlined} from '@ant-design/icons';
 import Home from "../home/home";
 import Activity from "../activity/activity";
-import Product from "../product/product";
-import Role from "../role/role";
-import User from "../user/user";
+import Product from "../guide/product";
+import Role from "../guide/role";
+import User from "../guide/user";
 import Monster from "../entity/monster";
 import Npc from "../entity/npc";
 import Pet from "../entity/pet";
@@ -32,7 +32,7 @@ export default class Admin extends Component {
                     </Sider>
                     <Layout>
                         <Header>Header</Header>
-                        <Content style={{margin:"20px",backgroundColor: "white"}}>
+                        <Content style={{margin:"20px", backgroundColor: "white"}}>
                             <Switch>
                                 <Route path={Constants.BASE_URL + "/home"} component={Home}/>
                                 <Route path={Constants.BASE_URL + "/activity"} component={Activity}/>
