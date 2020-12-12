@@ -70,10 +70,9 @@ export default class GoodsMonster extends Component {
 
         if (!searchName || searchName.trim() === "") {
             // 没有搜索值，就还原
-            this.setState({
-                columns: this.columns1,
-                data: searchType === "monster" ? this.monster2Good : this.good2Monster
-            });
+            const data = searchType === "monster" ? this.monster2Good : this.good2Monster;
+            const columns = searchType === "monster" ? this.columns1 : this.columns2;
+            this.setState({columns, data});
         } else {
             // 根据搜搜类型去查找
             if (searchType === "monster") {
