@@ -15,6 +15,7 @@ import Monster from "../entity/monster";
 import Npc from "../entity/npc";
 import Pet from "../entity/pet";
 import "./admin.less";
+import GoodsMonster from "../relation/goods-monster";
 
 const {Footer, Sider, Content } = Layout;
 
@@ -40,10 +41,11 @@ export default class Admin extends Component {
                                 <Route path={Constants.BASE_URL + "/advance"} component={Role}/>
                                 <Route path={Constants.BASE_URL + "/plan"} component={User}/>
                                 <Route path={Constants.BASE_URL + "/npc"} component={Npc}/>
-                                <Route path={Constants.BASE_URL + "/monster"} component={Monster}/>
+                                <Route path={Constants.BASE_URL + "/monster"} component={Monster} exact />
                                 <Route path={Constants.BASE_URL + "/pet"} component={Pet}/>
                                 <Route path={Constants.BASE_URL + "/equipment"} component={Pet}/>
                                 <Route path={Constants.BASE_URL + "/skill"} component={Pet}/>
+                                <Route path={Constants.BASE_URL + "/goods-monster"} component={GoodsMonster} exact/>
                                 <Redirect to={Constants.BASE_URL + "/home"}/>
                             </Switch>
                         </Content>

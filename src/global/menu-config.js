@@ -82,6 +82,18 @@ const menuList = [
                 ]
             }*/
         ]
+    },
+    {
+        title: "数据关系",
+        key: "/relation",
+        icon: <BarChartOutlined/>,
+        children: [
+            {
+                title: "物品-怪物",
+                key: "/goods-monster",
+                icon: null
+            }
+        ]
     }
 ]
 
