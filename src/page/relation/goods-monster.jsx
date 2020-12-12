@@ -42,7 +42,8 @@ export default class GoodsMonster extends Component {
             {
                 title: "物品",
                 dataIndex: "good",
-                key: "good"
+                key: "good",
+                width: 150
             },
             {
                 title: "怪物",
