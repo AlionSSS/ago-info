@@ -1,27 +1,27 @@
 {
   "files": {
     "main.css": "/ago-info/static/css/main.fd0d70d5.chunk.css",
-    "main.js": "/ago-info/static/js/main.7d7c11f7.chunk.js",
-    "main.js.map": "/ago-info/static/js/main.7d7c11f7.chunk.js.map",
-    "runtime-main.js": "/ago-info/static/js/runtime-main.7d058012.js",
-    "runtime-main.js.map": "/ago-info/static/js/runtime-main.7d058012.js.map",
-    "static/css/2.3e6b2b48.chunk.css": "/ago-info/static/css/2.3e6b2b48.chunk.css",
-    "static/js/2.d0170fa0.chunk.js": "/ago-info/static/js/2.d0170fa0.chunk.js",
-    "static/js/2.d0170fa0.chunk.js.map": "/ago-info/static/js/2.d0170fa0.chunk.js.map",
-    "static/js/3.9cf88e3e.chunk.js": "/ago-info/static/js/3.9cf88e3e.chunk.js",
-    "static/js/3.9cf88e3e.chunk.js.map": "/ago-info/static/js/3.9cf88e3e.chunk.js.map",
+    "main.js": "/ago-info/static/js/main.b3426ff8.chunk.js",
+    "main.js.map": "/ago-info/static/js/main.b3426ff8.chunk.js.map",
+    "runtime-main.js": "/ago-info/static/js/runtime-main.a3de3b84.js",
+    "runtime-main.js.map": "/ago-info/static/js/runtime-main.a3de3b84.js.map",
+    "static/css/2.a6d2dce2.chunk.css": "/ago-info/static/css/2.a6d2dce2.chunk.css",
+    "static/js/2.b6d43d49.chunk.js": "/ago-info/static/js/2.b6d43d49.chunk.js",
+    "static/js/2.b6d43d49.chunk.js.map": "/ago-info/static/js/2.b6d43d49.chunk.js.map",
+    "static/js/3.a6a83412.chunk.js": "/ago-info/static/js/3.a6a83412.chunk.js",
+    "static/js/3.a6a83412.chunk.js.map": "/ago-info/static/js/3.a6a83412.chunk.js.map",
     "index.html": "/ago-info/index.html",
-    "static/css/2.3e6b2b48.chunk.css.map": "/ago-info/static/css/2.3e6b2b48.chunk.css.map",
+    "static/css/2.a6d2dce2.chunk.css.map": "/ago-info/static/css/2.a6d2dce2.chunk.css.map",
     "static/css/main.fd0d70d5.chunk.css.map": "/ago-info/static/css/main.fd0d70d5.chunk.css.map",
-    "static/js/2.d0170fa0.chunk.js.LICENSE.txt": "/ago-info/static/js/2.d0170fa0.chunk.js.LICENSE.txt",
+    "static/js/2.b6d43d49.chunk.js.LICENSE.txt": "/ago-info/static/js/2.b6d43d49.chunk.js.LICENSE.txt",
     "static/media/login.less": "/ago-info/static/media/login_back.3026c36e.jpg",
     "static/media/logo.8ca7528f.ico": "/ago-info/static/media/logo.8ca7528f.ico"
   },
   "entrypoints": [
-    "static/js/runtime-main.7d058012.js",
-    "static/css/2.3e6b2b48.chunk.css",
-    "static/js/2.d0170fa0.chunk.js",
+    "static/js/runtime-main.a3de3b84.js",
+    "static/css/2.a6d2dce2.chunk.css",
+    "static/js/2.b6d43d49.chunk.js",
     "static/css/main.fd0d70d5.chunk.css",
-    "static/js/main.7d7c11f7.chunk.js"
+    "static/js/main.b3426ff8.chunk.js"
   ]
 }
