@@ -143,7 +143,7 @@ export default class Monster extends Component {
                            bordered={true} loading={this.state.loading}
                            pagination={{defaultPageSize: 10, showQuickJumper: true}}
                            scroll={{
-                               y: 450,
+                               y: 500,
                                x: 1500
                            }}>
 

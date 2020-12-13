@@ -11,10 +11,11 @@ export default class GoodsMonster extends Component {
         data: null,
         searchType: "monster",
         searchName: null,
+        loading: true
     }
 
-    showModal = () => {
-        message.info("暂不支持！");
+    showModal = (msg) => {
+        message.info(msg);
     }
 
     initData = () => {
@@ -60,41 +61,61 @@ export default class GoodsMonster extends Component {
 
         this.setState({
             columns: this.columns1,
-            data: this.monster2Good
+            data: this.monster2Good,
+            loading: false
         });
     }
 
-    search = () => {
-        const {searchType, searchName} = this.state;
-        console.log(searchType + ", " + searchName);
-
+    search = (searchType, searchName) => {
+        let columns = null;
+        let data = null;
         if (!searchName || searchName.trim() === "") {
             // 没有搜索值，就还原
-            const data = searchType === "monster" ? this.monster2Good : this.good2Monster;
-            const columns = searchType === "monster" ? this.columns1 : this.columns2;
-            this.setState({columns, data});
+            data = searchType === "monster" ? this.monster2Good : this.good2Monster;
+            columns = searchType === "monster" ? this.columns1 : this.columns2;
         } else {
             // 根据搜搜类型去查找
             if (searchType === "monster") {
-                let result = this.monster2Good.filter(v => v.name.indexOf(searchName) !== -1);
-                this.setState({
-                    columns: this.columns1,
-                    data: result
-                });
+                data = this.monster2Good.filter(v => v.name.indexOf(searchName) !== -1);
+                columns = this.columns1;
             } else if (searchType === "good") {
-                let result = this.good2Monster.filter(v => v.good.indexOf(searchName) !== -1);
-                this.setState({
-                    columns: this.columns2,
-                    data: result
-                });
-            } else {
-                this.showModal();
+                data = this.good2Monster.filter(v => v.good.indexOf(searchName) !== -1);
+                columns = this.columns2;
             }
         }
+
+        return {columns, data};
+    }
+
+    onClickSearch = () => {
+        this.setState({loading: true});
+
+        setTimeout(() => {
+            const {searchType, searchName} = this.state;
+            console.log(searchType + ", " + searchName);
+
+            const {columns, data} = this.search(searchType, searchName);
+            if (columns && data) {
+                this.setState({
+                    columns: columns,
+                    data: data,
+                    loading: false
+                });
+            } else {
+                this.showModal("暂不支持！");
+                this.setState({loading: false});
+            }
+        }, 100);
     }
 
     componentWillMount() {
-        this.initData();
+
+    }
+
+    componentDidMount() {
+        setTimeout(() => {
+            this.initData();
+        }, 100);
     }
 
     render() {
@@ -109,11 +130,11 @@ export default class GoodsMonster extends Component {
                 <Input placeholder="请输入关键字" style={{width: "150px", margin: "0 8px"}}
                        value={this.state.searchName}
                        onChange={event => this.setState({searchName: event.target.value})}/>
-                <Button type="primary" onClick={() => this.search()}>搜索</Button>
+                <Button type="primary" onClick={() => this.onClickSearch()}>搜索</Button>
             </span>
         );
         const extra = (
-            <Button type="primary" onClick={() => this.showModal()}>
+            <Button type="primary" onClick={() => this.showModal("暂不支持！")}>
                 <PlusOutlined/>
                 添加
             </Button>
@@ -124,7 +145,8 @@ export default class GoodsMonster extends Component {
                     dataSource={this.state.data}
                     columns={this.state.columns}
                     rowKey="key"
-                    bordered={true}/>
+                    bordered={true}
+                    loading={this.state.loading}/>
             </Card>
         );
     }

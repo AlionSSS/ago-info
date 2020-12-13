@@ -1,5 +1,5 @@
 import React from "react";
-import {AimOutlined, BarChartOutlined, HomeOutlined, NotificationOutlined} from '@ant-design/icons';
+import {AimOutlined, BarChartOutlined, HomeOutlined, NotificationOutlined, ShareAltOutlined} from '@ant-design/icons';
 
 const menuList = [
     {
@@ -86,7 +86,7 @@ const menuList = [
     {
         title: "数据关系",
         key: "/relation",
-        icon: <BarChartOutlined/>,
+        icon: <ShareAltOutlined />,
         children: [
             {
                 title: "物品-怪物",

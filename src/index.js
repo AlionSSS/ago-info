@@ -5,9 +5,10 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import StorageUtils from "./util/storage-utils";
 import Variables from "./global/variables";
-import Constants from "./global/constants";
 
 // 读取浏览器本地存储 => 内存
+StorageUtils.removeUser();
+StorageUtils.saveUser({name: "admin_test"});
 let user = StorageUtils.getUser();
 Variables.user = user;
 

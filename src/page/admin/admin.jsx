@@ -8,9 +8,9 @@ import Header from "../../component/header/header";
 import {GithubOutlined, QqOutlined, MailOutlined} from '@ant-design/icons';
 import Home from "../home/home";
 import Activity from "../activity/activity";
-import Product from "../guide/product";
-import Role from "../guide/role";
-import User from "../guide/user";
+import Beginner from "../guide/beginner";
+import Advance from "../guide/advance";
+import Plan from "../guide/plan";
 import Monster from "../entity/monster";
 import Npc from "../entity/npc";
 import Pet from "../entity/pet";
@@ -37,9 +37,9 @@ export default class Admin extends Component {
                             <Switch>
                                 <Route path={Constants.BASE_URL + "/home"} component={Home}/>
                                 <Route path={Constants.BASE_URL + "/activity"} component={Activity}/>
-                                <Route path={Constants.BASE_URL + "/beginner"} component={Product}/>
-                                <Route path={Constants.BASE_URL + "/advance"} component={Role}/>
-                                <Route path={Constants.BASE_URL + "/plan"} component={User}/>
+                                <Route path={Constants.BASE_URL + "/beginner"} component={Beginner}/>
+                                <Route path={Constants.BASE_URL + "/advance"} component={Advance}/>
+                                <Route path={Constants.BASE_URL + "/plan"} component={Plan}/>
                                 <Route path={Constants.BASE_URL + "/npc"} component={Npc}/>
                                 <Route path={Constants.BASE_URL + "/monster"} component={Monster} exact />
                                 <Route path={Constants.BASE_URL + "/pet"} component={Pet}/>

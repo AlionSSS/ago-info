@@ -1,11 +1,11 @@
 import React, {Component} from 'react';
 
-export default class Role extends Component {
+export default class Plan extends Component {
 
     render() {
         return (
             <div>
-                Role
+                Plan
             </div>
         );
     }

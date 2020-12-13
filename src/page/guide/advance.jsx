@@ -1,11 +1,11 @@
 import React, {Component} from 'react';
 
-export default class User extends Component {
+export default class Advance extends Component {
 
     render() {
         return (
             <div>
-                User
+                Advance
             </div>
         );
     }
