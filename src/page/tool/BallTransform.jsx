@@ -158,21 +158,20 @@ export default class BallTransform extends Component {
 
             this.setState({loading: false});
         }, 100);
-
-
     }
 
     transform = (src, dest, times = 1) => {
         const x = this.balls.indexOf(src);
         const y = this.balls.indexOf(dest);
         const value = this.relation.get(src);
-        console.log(x, y, value);
+
         if (value && x > -1 && y > -1 && x >= y) {
             const {balls, souls, money} = value;
             console.log(balls, souls, money);
+
             // 琉璃珠
             balls.forEach(b => {
-                if (b.name === dest) {
+                if (this.resultMap && b.name === dest) {
                     const v = this.resultMap.get(b.name);
                     const sum = v ? v.num + b.num * times : b.num * times;
                     this.resultMap.set(b.name, {num: sum, unit: "个"})
@@ -180,6 +179,7 @@ export default class BallTransform extends Component {
                     this.transform(b.name, dest, times * b.num);
                 }
             });
+
             if (this.resultMap) {
                 // 魂体
                 souls.forEach(s => {
