@@ -16,6 +16,7 @@ import Npc from "../entity/npc";
 import Pet from "../entity/pet";
 import "./admin.less";
 import GoodsMonster from "../relation/goods-monster";
+import BallTransform from "../tool/BallTransform";
 
 const {Footer, Sider, Content } = Layout;
 
@@ -46,6 +47,7 @@ export default class Admin extends Component {
                                 <Route path={Constants.BASE_URL + "/equipment"} component={Pet}/>
                                 <Route path={Constants.BASE_URL + "/skill"} component={Pet}/>
                                 <Route path={Constants.BASE_URL + "/goods-monster"} component={GoodsMonster} exact/>
+                                <Route path={Constants.BASE_URL + "/ball-transform"} component={BallTransform} exact/>
                                 <Redirect to={Constants.BASE_URL + "/home"}/>
                             </Switch>
                         </Content>

@@ -52,7 +52,7 @@ class LeftNav extends Component {
                     defaultSelectedKeys={path}
                     selectedKeys={path}
                     // defaultOpenKeys={[openKey]}
-                    defaultOpenKeys={['/strategy', '/entity', '/relation']}
+                    defaultOpenKeys={[/*'/strategy', */'/entity', '/relation', '/tool']}
                     mode="inline"
                     theme="dark"
                 >

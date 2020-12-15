@@ -94,6 +94,18 @@ const menuList = [
                 icon: null
             }
         ]
+    },
+    {
+        title: "小工具",
+        key: "/tool",
+        icon: <ShareAltOutlined />,
+        children: [
+            {
+                title: "琉璃珠转换",
+                key: "/ball-transform",
+                icon: null
+            }
+        ]
     }
 ]
 
