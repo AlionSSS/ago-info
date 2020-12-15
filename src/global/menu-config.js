@@ -1,5 +1,5 @@
 import React from "react";
-import {AimOutlined, BarChartOutlined, HomeOutlined, NotificationOutlined, ShareAltOutlined} from '@ant-design/icons';
+import {AimOutlined, BarChartOutlined, HomeOutlined, NotificationOutlined, ShareAltOutlined, ToolOutlined} from '@ant-design/icons';
 
 const menuList = [
     {
@@ -98,7 +98,7 @@ const menuList = [
     {
         title: "小工具",
         key: "/tool",
-        icon: <ShareAltOutlined />,
+        icon: <ToolOutlined />,
         children: [
             {
                 title: "琉璃珠转换",
